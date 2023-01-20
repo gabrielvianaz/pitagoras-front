@@ -1,0 +1,67 @@
+<svg width="995" height="624" viewBox="0 0 995 624" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1_692" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="995" height="624">
+<path d="M0 0V2V624H995V623V621.5V620L4 0.5L3 0H0Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_692)">
+<mask id="mask1_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_1_692)">
+<path d="M2.23553 621.311H992.305L2.23553 2.51282V621.311Z" fill="#5C4FB0" fill-opacity="0.53"/>
+</g>
+<mask id="mask2_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_1_692)">
+<path d="M2.23553 621.311H55.1093V568.447H2.23553V621.311Z" fill="black" fill-opacity="0.10196"/>
+</g>
+<mask id="mask3_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_1_692)">
+<path d="M2.23553 621.311H55.1093V568.447H2.23553V621.311Z" stroke="white" stroke-width="4.2816" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask4_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask4_1_692)">
+<path d="M928.898 581.682C921.47 593.571 917.532 607.304 917.532 621.311H992.305L928.898 581.682Z" fill="black" fill-opacity="0.10196"/>
+</g>
+<mask id="mask5_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_1_692)">
+<path d="M928.898 581.682C921.47 593.571 917.532 607.304 917.532 621.311H992.305L928.898 581.682Z" stroke="white" stroke-width="4.2816" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask6_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_1_692)">
+<path d="M2.23553 77.2849C28.0169 77.2849 51.9789 64.0029 65.6422 42.142L2.23553 2.51282V77.2849Z" fill="black" fill-opacity="0.10196"/>
+</g>
+<mask id="mask7_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_1_692)">
+<path d="M2.23553 77.2849C28.0169 77.2849 51.9789 64.0029 65.6422 42.142L2.23553 2.51282V77.2849Z" stroke="white" stroke-width="4.2816" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask8_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask8_1_692)">
+<path d="M2.23553 2.51282V621.311" stroke="white" stroke-width="4.2816" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask9_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask9_1_692)">
+<path d="M992.305 621.311L2.23553 2.51282" stroke="white" stroke-width="4.2816" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask10_1_692" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-105" y="-72" width="1194" height="820">
+<path d="M-105 -72V748H1088.86V-72H-105Z" fill="white"/>
+</mask>
+<g mask="url(#mask10_1_692)">
+<path d="M2.23553 621.311H992.305" stroke="white" stroke-width="4.2816" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>
