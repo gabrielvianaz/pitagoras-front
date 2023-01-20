@@ -2,7 +2,9 @@
   <div id="app">
     <HeaderComponent />
     <main>
-      <router-view />
+      <Transition>
+        <router-view />
+      </Transition>
     </main>
     <FooterComponent />
   </div>
@@ -26,5 +28,15 @@ import FooterComponent from "./components/FooterComponent.vue";
 main {
   flex: 1;
   display: flex;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 1s;
 }
 </style>

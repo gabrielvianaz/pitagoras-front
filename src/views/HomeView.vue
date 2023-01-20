@@ -5,65 +5,12 @@
       src="@/assets/triangulo.svg"
       alt="Triângulo Retângulo"
     />
-    <div class="inputs">
-      <input
-        type="number"
-        placeholder="Digite o valor do cateto adjacente"
-        v-model="catetoAdjacente"
-      />
-      <input
-        type="number"
-        placeholder="Digite o valor do cateto oposto"
-        v-model="catetoOposto"
-      />
-      <input
-        type="number"
-        disabled
-        placeholder="Valor da hipotenusa"
-        v-model="hipotenusa"
-      />
-    </div>
+    <InputsTriangulo />
   </section>
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
-import axios from "axios";
-
-const catetoAdjacente = ref();
-const catetoOposto = ref();
-const hipotenusa = ref();
-
-watch(catetoAdjacente, () => {
-  if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
-});
-
-watch(catetoOposto, () => {
-  if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
-});
-
-function getHipotenusa() {
-  hipotenusa.value = "";
-
-  axios
-    .get(
-      "http://localhost:5000/pitagoras",
-      {
-        params: {
-          a: catetoAdjacente.value,
-          b: catetoOposto.value,
-        },
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-    .then(({ data }) => (hipotenusa.value = data));
-}
-
-hipotenusa;
+import InputsTriangulo from "@/components/InputsTriangulo.vue";
 </script>
 
 <style scoped>
@@ -77,64 +24,36 @@ hipotenusa;
   height: 400px;
   align-self: center;
   justify-self: center;
-}
-
-.inputs {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-}
-
-input {
-  width: 300px;
-  height: 50px;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-}
-
-input:focus {
-  outline: none;
-}
-
-input:disabled {
-  background: #fff;
-  font-weight: bold;
+  margin-right: 50px;
 }
 
 /* Responsivo */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .triangulo {
-    height: 270px;
+    height: 250px;
     margin-right: 30px;
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
+@media screen and (min-width: 581px) and (max-width: 767px) {
   .home {
     flex-direction: column;
   }
 
   .triangulo {
-    height: 350px;
-  }
-
-  .inputs {
-    margin: 30px 0;
+    height: 300px;
+    margin: 0;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   .home {
     flex-direction: column;
   }
   .triangulo {
     height: 200px;
-  }
-
-  .inputs {
-    margin: 30px 0;
+    margin: 0;
   }
 }
 </style>

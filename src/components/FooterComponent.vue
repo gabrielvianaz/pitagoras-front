@@ -8,7 +8,7 @@
 
 <style scoped>
 footer {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 h4 {
@@ -24,13 +24,5 @@ h4 a {
 
 h4 a:hover {
   opacity: 0.75;
-}
-
-/* Responsivo */
-
-@media screen and (max-width: 767px) {
-  footer {
-    padding-bottom: 30px;
-  }
 }
 </style>
