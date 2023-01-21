@@ -5,12 +5,12 @@
       src="@/assets/triangulo.svg"
       alt="Triângulo Retângulo"
     />
-    <InputsTriangulo />
+    <CalculadoraPitagoras />
   </section>
 </template>
 
 <script setup>
-import InputsTriangulo from "@/components/InputsTriangulo.vue";
+import CalculadoraPitagoras from "@/components/CalculadoraPitagoras.vue";
 </script>
 
 <style scoped>
@@ -21,7 +21,7 @@ import InputsTriangulo from "@/components/InputsTriangulo.vue";
   justify-content: center;
 }
 .triangulo {
-  height: 400px;
+  height: 300px;
   align-self: center;
   justify-self: center;
   margin-right: 50px;
@@ -42,7 +42,7 @@ import InputsTriangulo from "@/components/InputsTriangulo.vue";
   }
 
   .triangulo {
-    height: 300px;
+    height: 250px;
     margin: 0;
   }
 }

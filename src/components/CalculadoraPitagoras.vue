@@ -23,7 +23,7 @@
 
 <script setup>
 import { ref, watch } from "vue";
-import axios from "axios";
+import { api } from "@/api";
 
 const catetoAdjacente = ref();
 const catetoOposto = ref();
@@ -34,8 +34,8 @@ function getHipotenusa() {
 
   hipotenusa.value = "";
 
-  axios
-    .get("http://localhost:5000/pitagoras", {
+  api
+    .get("pitagoras", {
       params: {
         adjacente: catetoAdjacente.value,
         oposto: catetoOposto.value,
@@ -48,17 +48,19 @@ watch(catetoAdjacente, () => {
   // Validação para proibir números negativos
   if (catetoAdjacente.value < 0)
     catetoAdjacente.value = catetoAdjacente.value * -1;
-
+  // Reseta o valor da variável hipotenusa caso o valor da variável catetoAdjacente seja false
+  else if (!catetoAdjacente.value) hipotenusa.value = "";
   // Ao haver uma mudança na variável catetoAdjacente e caso seu valor e o valor de catetoOposto forem true, chama a função getHipotenusa
-  if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
+  else if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
 });
 
 watch(catetoOposto, () => {
   // Validação para proibir números negativos
   if (catetoOposto.value < 0) catetoOposto.value = catetoOposto.value * -1;
-
+  // Reseta o valor da variável hipotenusa caso o valor da variável catetoOposto seja false
+  else if (!catetoOposto.value) hipotenusa.value = "";
   // Ao haver uma mudança na variável catetoOposto e caso seu valor e o valor de catetoAdjacente forem true, chama a função getHipotenusa
-  if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
+  else if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
 });
 </script>
 
@@ -80,6 +82,7 @@ input {
 
 input:focus {
   outline: none;
+  box-shadow: 5px 5px 9px -2px rgba(0, 0, 0, 0.25);
 }
 
 input:disabled {
