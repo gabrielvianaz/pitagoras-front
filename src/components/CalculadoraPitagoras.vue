@@ -30,8 +30,7 @@ const catetoOposto = ref();
 const hipotenusa = ref();
 
 function getHipotenusa() {
-  // Reseta o valor da variável hipotenusa e faz o request com os dados do cateto adjacente e oposto, atribuindo o resultado à variável hipotenusa
-
+  // Reseta o valor da variável hipotenusa e faz o request com os dados do cateto adjacente e oposto, atribuindo o retorno à variável hipotenusa
   hipotenusa.value = "";
 
   api
@@ -44,22 +43,13 @@ function getHipotenusa() {
     .then(({ data }) => (hipotenusa.value = data));
 }
 
-watch(catetoAdjacente, () => {
+watch([catetoAdjacente, catetoOposto], () => {
   // Validação para proibir números negativos
-  if (catetoAdjacente.value < 0)
-    catetoAdjacente.value = catetoAdjacente.value * -1;
-  // Reseta o valor da variável hipotenusa caso o valor da variável catetoAdjacente seja false
-  else if (!catetoAdjacente.value) hipotenusa.value = "";
-  // Ao haver uma mudança na variável catetoAdjacente e caso seu valor e o valor de catetoOposto forem true, chama a função getHipotenusa
-  else if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
-});
-
-watch(catetoOposto, () => {
-  // Validação para proibir números negativos
-  if (catetoOposto.value < 0) catetoOposto.value = catetoOposto.value * -1;
-  // Reseta o valor da variável hipotenusa caso o valor da variável catetoOposto seja false
-  else if (!catetoOposto.value) hipotenusa.value = "";
-  // Ao haver uma mudança na variável catetoOposto e caso seu valor e o valor de catetoAdjacente forem true, chama a função getHipotenusa
+  if (catetoAdjacente.value < 0) catetoAdjacente.value *= -1;
+  else if (catetoOposto.value < 0) catetoOposto.value *= -1;
+  // Reseta o valor da variável hipotenusa caso o valor de algum dos lados seja false
+  else if (!catetoAdjacente.value || !catetoOposto.value) hipotenusa.value = "";
+  // Caso o valor dos dois lados seja true, chama a função getHipotenusa
   else if (catetoAdjacente.value && catetoOposto.value) getHipotenusa();
 });
 </script>

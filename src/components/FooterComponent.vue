@@ -22,7 +22,9 @@ h4 a {
   text-decoration: none;
 }
 
-h4 a:hover {
+h4 a:hover,
+h4 a:focus {
   opacity: 0.75;
+  outline: none;
 }
 </style>
